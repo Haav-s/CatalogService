@@ -4,7 +4,7 @@ using Models;
 namespace CatalogService.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("product")]
 public class CatalogController : ControllerBase
 {
     private readonly ILogger<CatalogController> _logger;
@@ -52,12 +52,13 @@ public class CatalogController : ControllerBase
     {
         _logger = logger;
     }
+
     [HttpGet]
     public IEnumerable<Product> GetAll()
     {
         return _products;
     }
-    
+
     [HttpGet("{productId}", Name = "GetProductById")]
     public Product? Get(Guid productId)
     {
