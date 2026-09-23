@@ -60,8 +60,15 @@ public class CatalogController : ControllerBase
     }
 
     [HttpGet("{productId}", Name = "GetProductById")]
-    public Product? Get(Guid productId)
+    public ActionResult<Product> Get(Guid productId)
     {
-        return _products.FirstOrDefault(p => p.Id == productId);
+        var product = _products.FirstOrDefault(p => p.Id == productId);
+
+        if (product == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(product);
     }
 }
