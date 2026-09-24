@@ -13,7 +13,7 @@ public class CatalogController : ControllerBase
     {
         new Product
         {
-            Id = Guid.NewGuid(),
+            Id = Guid.Parse("44444444-4444-4444-4444-444444444444"),
             Name = "Laptop",
             Description = "A laptop computer",
             Price = 7999,
@@ -25,7 +25,7 @@ public class CatalogController : ControllerBase
 
         new Product
         {
-            Id = Guid.NewGuid(),
+            Id = Guid.Parse("55555555-5555-5555-5555-555555555555"),
             Name = "Phone",
             Description = "A smartphone",
             Price = 4999,
@@ -37,7 +37,7 @@ public class CatalogController : ControllerBase
 
         new Product
         {
-            Id = Guid.NewGuid(),
+            Id = Guid.Parse("77777777-7777-7777-7777-777777777777"),
             Name = "Headphones",
             Description = "Wireless headphones",
             Price = 999,
