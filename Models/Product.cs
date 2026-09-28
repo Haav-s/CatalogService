@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Models;
 
 public class Product
 {
+    [BsonId]
     [Required]
     public Guid Id { get; set; }
 
@@ -11,7 +14,10 @@ public class Product
     public string? Name { get; set; }
 
     public string? Description { get; set; }
+
+    [BsonRepresentation(BsonType.Decimal128)]
     public decimal Price { get; set; }
+
     public string? Brand { get; set; }
     public string? Manufacturer { get; set; }
     public string? Model { get; set; }
