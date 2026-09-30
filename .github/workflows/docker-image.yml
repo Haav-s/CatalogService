@@ -1,5 +1,4 @@
 name: Byg et Docker Image
-
 on:
   push:
     branches: [ "main" ]
