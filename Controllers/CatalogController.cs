@@ -2,10 +2,12 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CatalogService.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("product")]
 public class CatalogController : ControllerBase
 {
